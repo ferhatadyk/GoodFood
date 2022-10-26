@@ -22,7 +22,12 @@ class SignInViewController: UIViewController {
         view.endEditing(true)
         
     }
+    
+    
   
+    @IBAction func forgetBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "toForget", sender: nil)
+    }
     
 
     
