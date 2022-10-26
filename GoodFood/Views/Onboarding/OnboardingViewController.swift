@@ -36,14 +36,14 @@ class OnboardingViewController: UIViewController {
 
         slides = [OnboardingSlide(title: "Get fastest delivery ", description: "Lorem Ipsum is simply dummy text of the printing.", image: #imageLiteral(resourceName: "onboardingMotor")),
          OnboardingSlide(title: "Pick the best food", description: "Lorem Ipsum is simply dummy text of the printing. ", image: #imageLiteral(resourceName: "pizzeria")),
-         OnboardingSlide(title: "Rate your food", description: "Lorem Ipsum is simply dummy text of the printing. ", image: #imageLiteral(resourceName: "onlin"))]
+         OnboardingSlide(title: "Rates your food", description: "Lorem Ipsum is simply dummy text of the printing. ", image: #imageLiteral(resourceName: "onlin"))]
         }
     
 
     
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
-            print("go")
+            performSegue(withIdentifier: "toSingin", sender: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

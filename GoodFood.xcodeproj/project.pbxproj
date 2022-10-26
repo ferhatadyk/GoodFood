@@ -16,6 +16,9 @@
 		2239B1C72906AE3B007BA8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2239B1C62906AE3B007BA8E4 /* Assets.xcassets */; };
 		2239B1CA2906AE3B007BA8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2239B1C82906AE3B007BA8E4 /* LaunchScreen.storyboard */; };
 		2239B1D62906B336007BA8E4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239B1D52906B336007BA8E4 /* OnboardingViewController.swift */; };
+		225DAB542909809600663797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225DAB532909809600663797 /* GoogleService-Info.plist */; };
+		2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A85D29099D4F004CD620 /* SignInViewController.swift */; };
+		2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A86029099EB1004CD620 /* SingUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		2239B1C92906AE3B007BA8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2239B1CB2906AE3B007BA8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2239B1D52906B336007BA8E4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		225DAB532909809600663797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2260A85D29099D4F004CD620 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2260A86029099EB1004CD620 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 				2239B1C62906AE3B007BA8E4 /* Assets.xcassets */,
 				2239B1C82906AE3B007BA8E4 /* LaunchScreen.storyboard */,
 				2239B1CB2906AE3B007BA8E4 /* Info.plist */,
+				225DAB532909809600663797 /* GoogleService-Info.plist */,
 			);
 			path = GoodFood;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 		2239B1D22906B2D0007BA8E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2260A85F29099E8D004CD620 /* Sing */,
 				2239B1D42906B2EE007BA8E4 /* Onboarding */,
 			);
 			path = Views;
@@ -114,6 +122,15 @@
 				22338CA62906BD90007AC52A /* ExtensionUIView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2260A85F29099E8D004CD620 /* Sing */ = {
+			isa = PBXGroup;
+			children = (
+				2260A85D29099D4F004CD620 /* SignInViewController.swift */,
+				2260A86029099EB1004CD620 /* SingUpViewController.swift */,
+			);
+			path = Sing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2239B1CA2906AE3B007BA8E4 /* LaunchScreen.storyboard in Resources */,
+				225DAB542909809600663797 /* GoogleService-Info.plist in Resources */,
 				2239B1C72906AE3B007BA8E4 /* Assets.xcassets in Resources */,
 				2239B1C52906AE39007BA8E4 /* Main.storyboard in Resources */,
 			);
@@ -187,7 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */,
 				2239B1BE2906AE39007BA8E4 /* AppDelegate.swift in Sources */,
+				2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */,
 				2239B1C02906AE39007BA8E4 /* SceneDelegate.swift in Sources */,
 				22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */,
 				22338CA92906BE67007AC52A /* onboardingSlide.swift in Sources */,
