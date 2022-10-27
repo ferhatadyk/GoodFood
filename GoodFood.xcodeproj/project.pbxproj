@@ -19,6 +19,7 @@
 		225DAB542909809600663797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225DAB532909809600663797 /* GoogleService-Info.plist */; };
 		2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A85D29099D4F004CD620 /* SignInViewController.swift */; };
 		2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A86029099EB1004CD620 /* SingUpViewController.swift */; };
+		22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */; };
 		289940320003E43FE230147D /* Pods_GoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C638E6DB2CD42427741A11 /* Pods_GoodFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		225DAB532909809600663797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2260A85D29099D4F004CD620 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2260A86029099EB1004CD620 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
 		8F837F79B5145BA7803301C5 /* Pods-GoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.release.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		D2C638E6DB2CD42427741A11 /* Pods_GoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 			children = (
 				2260A85D29099D4F004CD620 /* SignInViewController.swift */,
 				2260A86029099EB1004CD620 /* SingUpViewController.swift */,
+				22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */,
 			);
 			path = Sing;
 			sourceTree = "<group>";
@@ -154,7 +157,6 @@
 				148517BEF8B5D4F31DACD464 /* Pods-GoodFood.debug.xcconfig */,
 				8F837F79B5145BA7803301C5 /* Pods-GoodFood.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -282,6 +284,7 @@
 				22338CA92906BE67007AC52A /* onboardingSlide.swift in Sources */,
 				2239B1D62906B336007BA8E4 /* OnboardingViewController.swift in Sources */,
 				22338CAB2906C4B0007AC52A /* OnboardingCollectionViewCell.swift in Sources */,
+				22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

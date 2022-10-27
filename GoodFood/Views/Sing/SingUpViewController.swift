@@ -8,6 +8,17 @@
 import UIKit
 
 class SingUpViewController: UIViewController {
+    
+    
+    
+    @IBOutlet var nameSurnameTxtField: UITextField!
+    @IBOutlet var singUpEmailTextField: UITextField!
+    @IBOutlet var singUpAdressTextfield: UITextField!
+    @IBOutlet var singUpPasswordTextField: UITextField!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +32,12 @@ class SingUpViewController: UIViewController {
         view.endEditing(true)
         
     }
-
+    
+    
+    @IBAction func singUpClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAlreadySingIn", sender: nil)
+    }
+    
     @IBAction func toSingInDont(_ sender: UIButton) {
         performSegue(withIdentifier: "toAlreadySingIn", sender: nil)
     }
