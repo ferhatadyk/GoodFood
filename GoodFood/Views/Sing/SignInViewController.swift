@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -37,12 +38,36 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInClick(_ sender: UIButton) {
-        performSegue(withIdentifier: "toHomeVC", sender: nil)
+        
+       
+        if signInEmailTxtField.text != "" && signInPasswordTxtField.text != "" {
+            
+            Auth.auth().signIn(withEmail: signInEmailTxtField.text!, password: signInPasswordTxtField.text!) { (authdataresult, error) in
+                if error != nil {
+                    self.errorMessage(titleInput: "Error", messageInput: error?.localizedDescription ?? "You got an error please try again.")
+                }
+                else {
+                    self.performSegue(withIdentifier: "toHomeVC", sender: nil)
+                }
+            }
+            
+        } else {
+            self.errorMessage(titleInput: "Error", messageInput: "Enter your email and password")
+        }
+       
     }
     
     
     @IBAction func singUpDont(_ sender: UIButton) {
         performSegue(withIdentifier: "toSingUp", sender: nil)
+        
     }
     
+    
+    func errorMessage(titleInput: String, messageInput: String) {
+        let alert  = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let OKBtn = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert .addAction(OKBtn)
+        self.present(alert, animated: true, completion: nil)
+    }
 }

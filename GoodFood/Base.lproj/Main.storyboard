@@ -176,13 +176,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zam-B1-9Hk">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zam-B1-9Hk">
                                 <rect key="frame" x="20" y="643" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="2ow-no-tO5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="13"/>
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkf-Z4-51A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.6376811594205" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="1055" y="-44"/>
         </scene>
         <!--Sing Up View Controller-->
         <scene sceneID="eYg-Fj-lpd">
@@ -334,7 +334,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSw-xO-X6F">
                                 <rect key="frame" x="20" y="604" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="13"/>
@@ -466,6 +466,7 @@
                         <outlet property="singUpEmailTextField" destination="kbe-jo-HGi" id="xfu-OR-sV6"/>
                         <outlet property="singUpPasswordTextField" destination="mSw-xO-X6F" id="kbH-Q8-M9m"/>
                         <segue destination="iMl-5X-ld9" kind="presentation" identifier="toAlreadySingIn" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="gqH-y7-kuY"/>
+                        <segue destination="iMl-5X-ld9" kind="presentation" identifier="doneSingUp" modalPresentationStyle="fullScreen" id="YS0-X4-gG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWi-uv-mQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -475,7 +476,7 @@
         <!--Search-->
         <scene sceneID="vwd-oZ-ek0">
             <objects>
-                <viewController id="G3Z-nS-5gN" sceneMemberID="viewController">
+                <viewController id="G3Z-nS-5gN" customClass="SearchViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LKj-fo-4Lx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,10 +497,72 @@
             </objects>
             <point key="canvasLocation" x="2625" y="266"/>
         </scene>
+        <!--Order-->
+        <scene sceneID="taH-wX-XwF">
+            <objects>
+                <viewController id="9FI-lD-3sk" customClass="OrdersViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNg-JX-PL6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iGg-em-ukE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Order" id="XeU-bC-vG7">
+                        <imageReference key="image" image="basket" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKb-ov-a2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652" y="977"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="63r-17-VQO">
+            <objects>
+                <viewController id="sQP-pa-QxD" customClass="SettingsViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3QQ-ad-pTi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S42-5A-3Cc">
+                                <rect key="frame" x="182" y="431" width="52" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Exit"/>
+                                <connections>
+                                    <action selector="exitClicked:" destination="sQP-pa-QxD" eventType="touchUpInside" id="U3W-xp-SYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J88-qS-wNL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="qxy-ag-6Nw">
+                        <imageReference key="image" image="person.bust.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <segue destination="iMl-5X-ld9" kind="presentation" identifier="exitToSingIn" modalPresentationStyle="fullScreen" id="kqD-Gn-IK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Ar-T71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2601" y="-1103"/>
+        </scene>
         <!--Home-->
         <scene sceneID="3Bu-Md-LM2">
             <objects>
-                <viewController id="oyc-sU-JAM" sceneMemberID="viewController">
+                <viewController id="oyc-sU-JAM" customClass="HomeViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FsV-cl-djb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvn-Mi-hp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="-455"/>
+            <point key="canvasLocation" x="2625" y="-415"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AMB-Lc-qZN">
@@ -534,6 +597,8 @@
                     <connections>
                         <segue destination="oyc-sU-JAM" kind="relationship" relationship="viewControllers" id="eea-oM-CYD"/>
                         <segue destination="G3Z-nS-5gN" kind="relationship" relationship="viewControllers" id="uCr-sh-yY6"/>
+                        <segue destination="9FI-lD-3sk" kind="relationship" relationship="viewControllers" id="Dvc-tB-hPz"/>
+                        <segue destination="sQP-pa-QxD" kind="relationship" relationship="viewControllers" id="353-U7-nZX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Iz-24-3KZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -557,7 +622,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nc7-Kx-Did">
                                 <rect key="frame" x="22" y="402" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="13"/>
@@ -570,7 +635,7 @@
                                     <constraint firstAttribute="height" constant="34" id="5Bq-IN-kwE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="13"/>
@@ -667,12 +732,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tvb-Pu-roL"/>
+        <segue reference="gqH-y7-kuY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appstore" width="512" height="512"/>
+        <image name="basket" catalog="system" width="128" height="108"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.bust.fill" catalog="system" width="119" height="128"/>
         <namedColor name="Color 1">
             <color red="0.86699998378753662" green="0.48600000143051147" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
