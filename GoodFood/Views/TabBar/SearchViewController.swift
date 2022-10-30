@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  SearchViewController.swift
 //  GoodFood
 //
 //  Created by Ferhat Adiyeke on 27.10.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,4 @@ class SettingsViewController: UIViewController {
     
 
    
-    @IBAction func exitClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "exitToSingIn", sender: nil)
-    }
-    
 }

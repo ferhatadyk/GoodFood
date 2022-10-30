@@ -10,6 +10,8 @@ pod 'FirebaseFirestore'
 pod 'FirebaseAuth'
 pod 'FirebaseStorage'
 pod 'GoogleSignIn'
+pod 'Kingfisher'
+
 
   # Pods for GoodFood
 

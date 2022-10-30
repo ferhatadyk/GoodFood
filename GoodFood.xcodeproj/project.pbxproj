@@ -24,6 +24,14 @@
 		22A2A8BC290A8D55005639A6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */; };
 		22A2A8BE290A8D6D005639A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */; };
 		22A2A8C0290A8D7F005639A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */; };
+		22E2108E290C4C82001D0516 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E2108C290C4C82001D0516 /* CategoryCollectionViewCell.swift */; };
+		22E2108F290C4C82001D0516 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E2108D290C4C82001D0516 /* CategoryCollectionViewCell.xib */; };
+		22E21091290C4E7F001D0516 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E21090290C4E7F001D0516 /* DishCategory.swift */; };
+		22E21093290D6F5D001D0516 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E21092290D6F5C001D0516 /* StringExtension.swift */; };
+		22FEA340290D89D10002CEED /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEA33F290D89D10002CEED /* CardView.swift */; };
+		22FEA34A290D917D0002CEED /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEA348290D917D0002CEED /* DishPortraitCollectionViewCell.swift */; };
+		22FEA34B290D917D0002CEED /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FEA349290D917D0002CEED /* DishPortraitCollectionViewCell.xib */; };
+		22FEA34D290E8CB20002CEED /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEA34C290E8CB20002CEED /* Dish.swift */; };
 		289940320003E43FE230147D /* Pods_GoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C638E6DB2CD42427741A11 /* Pods_GoodFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +56,14 @@
 		22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		22E2108C290C4C82001D0516 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		22E2108D290C4C82001D0516 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		22E21090290C4E7F001D0516 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		22E21092290D6F5C001D0516 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		22FEA33F290D89D10002CEED /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		22FEA348290D917D0002CEED /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
+		22FEA349290D917D0002CEED /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
+		22FEA34C290E8CB20002CEED /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		8F837F79B5145BA7803301C5 /* Pods-GoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.release.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.release.xcconfig"; sourceTree = "<group>"; };
 		D2C638E6DB2CD42427741A11 /* Pods_GoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,9 +105,8 @@
 				2239B1D32906B2D9007BA8E4 /* CustomViews */,
 				2239B1D22906B2D0007BA8E4 /* Views */,
 				2239B1D12906B2C9007BA8E4 /* Models */,
-				2239B1BD2906AE39007BA8E4 /* AppDelegate.swift */,
-				2239B1BF2906AE39007BA8E4 /* SceneDelegate.swift */,
 				2239B1C32906AE39007BA8E4 /* Main.storyboard */,
+				22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */,
 				2239B1C62906AE3B007BA8E4 /* Assets.xcassets */,
 				2239B1C82906AE3B007BA8E4 /* LaunchScreen.storyboard */,
 				2239B1CB2906AE3B007BA8E4 /* Info.plist */,
@@ -104,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				22338CA82906BE67007AC52A /* onboardingSlide.swift */,
+				22E21090290C4E7F001D0516 /* DishCategory.swift */,
+				22FEA34C290E8CB20002CEED /* Dish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,12 +128,8 @@
 		2239B1D22906B2D0007BA8E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22E21087290C2DAD001D0516 /* TabBar */,
 				2260A85F29099E8D004CD620 /* Sing */,
-				2239B1D42906B2EE007BA8E4 /* Onboarding */,
-				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
-				22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */,
-				22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */,
-				22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +137,8 @@
 		2239B1D32906B2D9007BA8E4 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				22FEA33E290D89C00002CEED /* CardView */,
+				22E21088290C4BEC001D0516 /* CollectionViewCells */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -140,7 +155,10 @@
 		2239B1D72906BC2E007BA8E4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2239B1BD2906AE39007BA8E4 /* AppDelegate.swift */,
+				2239B1BF2906AE39007BA8E4 /* SceneDelegate.swift */,
 				22338CA62906BD90007AC52A /* ExtensionUIView.swift */,
+				22E21092290D6F5C001D0516 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -153,6 +171,52 @@
 				22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */,
 			);
 			path = Sing;
+			sourceTree = "<group>";
+		};
+		22E21087290C2DAD001D0516 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
+				22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */,
+				22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */,
+				2239B1D42906B2EE007BA8E4 /* Onboarding */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		22E21088290C4BEC001D0516 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				22FEA341290D8F8B0002CEED /* DishPortraitCollectionViewCell */,
+				22E21089290C4C06001D0516 /* CategoryCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		22E21089290C4C06001D0516 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22E2108C290C4C82001D0516 /* CategoryCollectionViewCell.swift */,
+				22E2108D290C4C82001D0516 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		22FEA33E290D89C00002CEED /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				22FEA33F290D89D10002CEED /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		22FEA341290D8F8B0002CEED /* DishPortraitCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22FEA348290D917D0002CEED /* DishPortraitCollectionViewCell.swift */,
+				22FEA349290D917D0002CEED /* DishPortraitCollectionViewCell.xib */,
+			);
+			path = DishPortraitCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		9520678D77005EF3B22A27DC /* Frameworks */ = {
@@ -233,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2239B1CA2906AE3B007BA8E4 /* LaunchScreen.storyboard in Resources */,
+				22FEA34B290D917D0002CEED /* DishPortraitCollectionViewCell.xib in Resources */,
+				22E2108F290C4C82001D0516 /* CategoryCollectionViewCell.xib in Resources */,
 				225DAB542909809600663797 /* GoogleService-Info.plist in Resources */,
 				2239B1C72906AE3B007BA8E4 /* Assets.xcassets in Resources */,
 				2239B1C52906AE39007BA8E4 /* Main.storyboard in Resources */,
@@ -289,18 +355,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */,
+				22E21091290C4E7F001D0516 /* DishCategory.swift in Sources */,
 				2239B1BE2906AE39007BA8E4 /* AppDelegate.swift in Sources */,
 				2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */,
+				22E21093290D6F5D001D0516 /* StringExtension.swift in Sources */,
 				22A2A8BC290A8D55005639A6 /* OrdersViewController.swift in Sources */,
 				22A2A8BA290A8BDB005639A6 /* SettingsViewController.swift in Sources */,
 				2239B1C02906AE39007BA8E4 /* SceneDelegate.swift in Sources */,
 				22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */,
 				22338CA92906BE67007AC52A /* onboardingSlide.swift in Sources */,
+				22FEA34D290E8CB20002CEED /* Dish.swift in Sources */,
 				22A2A8C0290A8D7F005639A6 /* SearchViewController.swift in Sources */,
 				2239B1D62906B336007BA8E4 /* OnboardingViewController.swift in Sources */,
 				22338CAB2906C4B0007AC52A /* OnboardingCollectionViewCell.swift in Sources */,
 				22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */,
+				22E2108E290C4C82001D0516 /* CategoryCollectionViewCell.swift in Sources */,
+				22FEA340290D89D10002CEED /* CardView.swift in Sources */,
 				22A2A8BE290A8D6D005639A6 /* HomeViewController.swift in Sources */,
+				22FEA34A290D917D0002CEED /* DishPortraitCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

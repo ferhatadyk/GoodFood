@@ -15,7 +15,7 @@ class SingUpViewController: UIViewController {
     @IBOutlet var singUpEmailTextField: UITextField!
     @IBOutlet var singUpAdressTextfield: UITextField!
     @IBOutlet var singUpPasswordTextField: UITextField!
-    
+    @IBOutlet var telTextField: UITextField!
     
     
     
@@ -36,7 +36,9 @@ class SingUpViewController: UIViewController {
     
     @IBAction func singUpClicked(_ sender: UIButton) {
        
-        if nameSurnameTxtField.text != "" && singUpAdressTextfield.text != "" && singUpEmailTextField.text != "" && singUpPasswordTextField.text != "" {
+        if nameSurnameTxtField.text != "" && singUpAdressTextfield.text != "" && singUpEmailTextField.text != "" &&
+            telTextField.text != "" &&
+            singUpPasswordTextField.text != "" {
             Auth.auth().createUser(withEmail: singUpEmailTextField.text!, password: singUpPasswordTextField.text!) { (authdataresult, error) in
                 if error != nil {
                        
