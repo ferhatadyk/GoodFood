@@ -666,13 +666,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJG-wQ-wua">
                                                 <rect key="frame" x="0.0" y="518" width="414" height="168"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tüm Yiyecekler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJg-eI-at9">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJg-eI-at9">
                                                         <rect key="frame" x="16" y="16" width="382" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-aA-Ofh">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-aA-Ofh">
                                                         <rect key="frame" x="0.0" y="48" width="414" height="120"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sLe-mS-Er2">
@@ -691,6 +691,10 @@
                                                                 </collectionViewCellContentView>
                                                             </collectionViewCell>
                                                         </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="oyc-sU-JAM" id="yW1-40-HUy"/>
+                                                            <outlet property="delegate" destination="oyc-sU-JAM" id="g7q-cM-1ik"/>
+                                                        </connections>
                                                     </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -746,6 +750,7 @@
                         <color key="badgeColor" name="Color 1"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="allMealsCollectionView" destination="cBH-aA-Ofh" id="yVb-37-XNJ"/>
                         <outlet property="categoryCollectionView" destination="Toi-u8-JoS" id="Z1J-u0-DF1"/>
                         <outlet property="popularCollectionsView" destination="g2a-ko-7Vd" id="d1K-pu-aHr"/>
                     </connections>
@@ -911,7 +916,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="353-U7-nZX"/>
         <segue reference="kqD-Gn-IK7"/>
     </inferredMetricsTieBreakers>
     <resources>

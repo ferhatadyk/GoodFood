@@ -19,6 +19,8 @@
 		225DAB542909809600663797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225DAB532909809600663797 /* GoogleService-Info.plist */; };
 		2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A85D29099D4F004CD620 /* SignInViewController.swift */; };
 		2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A86029099EB1004CD620 /* SingUpViewController.swift */; };
+		22A20D2E290ED17100910938 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */; };
+		22A20D2F290ED17100910938 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */; };
 		22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */; };
 		22A2A8BA290A8BDB005639A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */; };
 		22A2A8BC290A8D55005639A6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */; };
@@ -51,6 +53,8 @@
 		225DAB532909809600663797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2260A85D29099D4F004CD620 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2260A86029099EB1004CD620 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
 		22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 			path = Sing;
 			sourceTree = "<group>";
 		};
+		22A20D2B290ED12F00910938 /* DishLandscapeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */,
+				22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandscapeCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		22E21087290C2DAD001D0516 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 		22E21088290C4BEC001D0516 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				22A20D2B290ED12F00910938 /* DishLandscapeCollectionViewCell */,
 				22FEA341290D8F8B0002CEED /* DishPortraitCollectionViewCell */,
 				22E21089290C4C06001D0516 /* CategoryCollectionViewCell */,
 			);
@@ -301,6 +315,7 @@
 				22E2108F290C4C82001D0516 /* CategoryCollectionViewCell.xib in Resources */,
 				225DAB542909809600663797 /* GoogleService-Info.plist in Resources */,
 				2239B1C72906AE3B007BA8E4 /* Assets.xcassets in Resources */,
+				22A20D2F290ED17100910938 /* DishLandscapeCollectionViewCell.xib in Resources */,
 				2239B1C52906AE39007BA8E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +371,7 @@
 			files = (
 				2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */,
 				22E21091290C4E7F001D0516 /* DishCategory.swift in Sources */,
+				22A20D2E290ED17100910938 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				2239B1BE2906AE39007BA8E4 /* AppDelegate.swift in Sources */,
 				2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */,
 				22E21093290D6F5D001D0516 /* StringExtension.swift in Sources */,

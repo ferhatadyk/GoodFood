@@ -12,6 +12,10 @@ class HomeViewController: UIViewController {
     @IBOutlet var categoryCollectionView: UICollectionView!
     
     @IBOutlet weak var popularCollectionsView: UICollectionView!
+    
+    
+    @IBOutlet weak var allMealsCollectionView: UICollectionView!
+    
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Pizza", image: #imageLiteral(resourceName: "pizzeria") ),
         .init(id: "id1", name: "Hamburger", image: #imageLiteral(resourceName: "burger2")),
@@ -32,8 +36,23 @@ class HomeViewController: UIViewController {
     
     ]
         
+    var specials: [Dish] = [
+        .init(id: "id1", name: "Pizza", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
+        .init(id: "id1", name: "Hamburger", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
+        .init(id: "id1", name: "Lahmacun", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
+        .init(id: "id1", name: "Coffee", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
+    ]
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 
     registerCells()
         
@@ -45,6 +64,7 @@ class HomeViewController: UIViewController {
         
         popularCollectionsView.register(UINib(nibName: DishPortraitCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishPortraitCollectionViewCell.identifier)
         
+        allMealsCollectionView.register(UINib(nibName: DishLandscapeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifier)
         
         
     }
@@ -71,6 +91,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.setup(dish: populars[indexPath.row])
             
             return cell
+        case allMealsCollectionView:
+            let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: DishLandscapeCollectionViewCell.identifier, for: indexPath) as! DishLandscapeCollectionViewCell
+            cell.setup(dish: specials[indexPath.row])
+            return cell
         default: return UICollectionViewCell()
         }
         
@@ -84,6 +108,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return categories.count
         case popularCollectionsView:
             return populars.count
+        case allMealsCollectionView:
+            return specials.count
+            
         default: return 0
         }
        
