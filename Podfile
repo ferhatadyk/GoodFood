@@ -11,6 +11,7 @@ pod 'FirebaseAuth'
 pod 'FirebaseStorage'
 pod 'GoogleSignIn'
 pod 'Kingfisher'
+pod 'IQKeyboardManagerSwift'
 
 
   # Pods for GoodFood

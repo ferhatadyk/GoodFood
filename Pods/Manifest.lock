@@ -770,6 +770,7 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.1.0)
+  - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (7.4.1)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
@@ -791,6 +792,7 @@ DEPENDENCIES:
   - FirebaseFirestore
   - FirebaseStorage
   - GoogleSignIn
+  - IQKeyboardManagerSwift
   - Kingfisher
 
 SPEC REPOS:
@@ -816,6 +818,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - Kingfisher
     - leveldb-library
     - Libuv-gRPC
@@ -844,12 +847,13 @@ SPEC CHECKSUMS:
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: a2aef6878fd8145ebf4286986cc1243f15aa0365
+PODFILE CHECKSUM: 244c13a60229fb76725ddf1b17fde1cc42ab69e2
 
 COCOAPODS: 1.11.3
