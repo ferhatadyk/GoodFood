@@ -37,10 +37,10 @@ class HomeViewController: UIViewController {
     ]
         
     var specials: [Dish] = [
-        .init(id: "id1", name: "Pizza", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
-        .init(id: "id1", name: "Hamburger", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
-        .init(id: "id1", name: "Lahmacun", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
-        .init(id: "id1", name: "Coffee", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
+        .init(id: "id1", name: "Tonno Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
+        .init(id: "id1", name: "Hamburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
+        .init(id: "id1", name: "Lahmacun", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
+        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
     ]
     
     
@@ -103,7 +103,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-            
+
         case categoryCollectionView:
             return categories.count
         case popularCollectionsView:
@@ -116,6 +116,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
        
         
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if  collectionView == categoryCollectionView {
+            
+            let controller =
+            ListDishesViewController.instantiate()
+            controller.dish = categories[indexPath.row]
+            tabBarController?.present(controller, animated: true)
+            
+        } else {
+            let
+            controller = DishDetailViewController.instantiate()
+            
+            controller.dish = collectionView == popularCollectionsView ? populars[indexPath.row] : specials[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        }
+        
+    }
     
 }
