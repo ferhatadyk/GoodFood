@@ -66,7 +66,7 @@
 		22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "../New Group1/SearchViewController.swift"; sourceTree = "<group>"; };
 		22DBBBA32911842900D07F24 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		22DBBBA52911863C00D07F24 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		22DBBBAA2911911F00D07F24 /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,10 +145,12 @@
 		2239B1D22906B2D0007BA8E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22E9F36C291B9E340036CE3D /* Search */,
+				22E9F36B291B9E240036CE3D /* Settings */,
+				2239B1D42906B2EE007BA8E4 /* Onboarding */,
 				22DBBBB12912A8DB00D07F24 /* ListOrder */,
 				22DBBBAE291196F600D07F24 /* ListDishes */,
 				22DBBBA2291183FA00D07F24 /* DishDetail */,
-				22E21087290C2DAD001D0516 /* TabBar */,
 				2260A85F29099E8D004CD620 /* Sing */,
 			);
 			path = Views;
@@ -245,16 +247,6 @@
 			path = ListOrder;
 			sourceTree = "<group>";
 		};
-		22E21087290C2DAD001D0516 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
-				22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */,
-				2239B1D42906B2EE007BA8E4 /* Onboarding */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		22E21088290C4BEC001D0516 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +264,22 @@
 				22E2108D290C4C82001D0516 /* CategoryCollectionViewCell.xib */,
 			);
 			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		22E9F36B291B9E240036CE3D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		22E9F36C291B9E340036CE3D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				22A2A8BF290A8D7F005639A6 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		22FEA33E290D89C00002CEED /* CardView */ = {
