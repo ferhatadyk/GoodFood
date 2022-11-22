@@ -579,23 +579,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S42-5A-3Cc">
-                                <rect key="frame" x="182" y="431" width="52" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Exit"/>
-                                <connections>
-                                    <action selector="exitClicked:" destination="sQP-pa-QxD" eventType="touchUpInside" id="U3W-xp-SYL"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="5" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-Hy-g3W">
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="l8Q-Qt-sus" detailTextLabel="uwW-DL-065" style="IBUITableViewCellStyleSubtitle" id="t9w-Rp-Uc8">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t9w-Rp-Uc8" id="Ka4-bN-MSH">
+                                            <rect key="frame" x="0.0" y="0.0" width="383.5" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l8Q-Qt-sus">
+                                                    <rect key="frame" x="20" y="14.5" width="39.5" height="25.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uwW-DL-065">
+                                                    <rect key="frame" x="20" y="43.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J88-qS-wNL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="S42-5A-3Cc"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstItem="iPg-Hy-g3W" firstAttribute="top" secondItem="J88-qS-wNL" secondAttribute="top" id="Ey2-YB-kyj"/>
+                            <constraint firstItem="J88-qS-wNL" firstAttribute="bottom" secondItem="iPg-Hy-g3W" secondAttribute="bottom" id="W73-fv-krO"/>
+                            <constraint firstItem="J88-qS-wNL" firstAttribute="trailing" secondItem="iPg-Hy-g3W" secondAttribute="trailing" id="nBR-FC-rar"/>
+                            <constraint firstItem="iPg-Hy-g3W" firstAttribute="leading" secondItem="J88-qS-wNL" secondAttribute="leading" id="q1E-7F-GZC"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="qxy-ag-6Nw">
                         <imageReference key="image" image="person.bust.fill" catalog="system" renderingMode="hierarchical">
@@ -607,6 +629,7 @@
                         </imageReference>
                     </tabBarItem>
                     <connections>
+                        <outlet property="tableView" destination="iPg-Hy-g3W" id="64m-LX-OwT"/>
                         <segue destination="iMl-5X-ld9" kind="presentation" identifier="exitToSingIn" modalPresentationStyle="fullScreen" id="kqD-Gn-IK7"/>
                     </connections>
                 </viewController>
@@ -787,12 +810,17 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="uwy-r6-ssA" firstAttribute="leading" secondItem="Q7A-1W-9cA" secondAttribute="leading" id="AZP-Sa-BuL"/>
+                                    <constraint firstItem="uwy-r6-ssA" firstAttribute="top" secondItem="Q7A-1W-9cA" secondAttribute="top" id="Fke-kn-sZk"/>
                                     <constraint firstAttribute="trailing" secondItem="uwy-r6-ssA" secondAttribute="trailing" id="Hgc-XV-wns"/>
                                     <constraint firstAttribute="bottom" secondItem="uwy-r6-ssA" secondAttribute="bottom" constant="47" id="SnH-XS-h5H"/>
                                     <constraint firstItem="uwy-r6-ssA" firstAttribute="centerX" secondItem="Dsg-7g-sz4" secondAttribute="centerX" id="auL-4r-E3i"/>
+                                    <constraint firstItem="Q7A-1W-9cA" firstAttribute="bottom" secondItem="uwy-r6-ssA" secondAttribute="bottom" constant="47" id="gWf-jy-A9q"/>
                                     <constraint firstItem="uwy-r6-ssA" firstAttribute="top" secondItem="SYP-EY-ljg" secondAttribute="top" id="qQ8-pt-gsU"/>
                                     <constraint firstItem="SYP-EY-ljg" firstAttribute="bottom" secondItem="uwy-r6-ssA" secondAttribute="bottom" constant="47" id="tUP-4L-Lit"/>
                                     <constraint firstItem="uwy-r6-ssA" firstAttribute="leading" secondItem="SYP-EY-ljg" secondAttribute="leading" id="ttz-m3-Bpt"/>
+                                    <constraint firstItem="uwy-r6-ssA" firstAttribute="width" secondItem="SYP-EY-ljg" secondAttribute="width" id="yof-rz-3hl"/>
+                                    <constraint firstItem="Q7A-1W-9cA" firstAttribute="trailing" secondItem="uwy-r6-ssA" secondAttribute="trailing" id="zn7-FN-S8V"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Q7A-1W-9cA"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="SYP-EY-ljg"/>
@@ -1122,7 +1150,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="353-U7-nZX"/>
         <segue reference="kqD-Gn-IK7"/>
     </inferredMetricsTieBreakers>
     <resources>

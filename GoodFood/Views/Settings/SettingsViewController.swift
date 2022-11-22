@@ -9,32 +9,34 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
+    let data = ["Hesabım","Ödeme yöntemi ","Adres ","Sıkça Sorulan Sorular","Çıkış yap"]
+    var FData: [String]!
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        FData = data
+       tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
+}
 
-   
-    @IBAction func exitClicked(_ sender: UIButton) {
-        
-        
-        
-        do {
-            
-            try Auth.auth().signOut()
-            performSegue(withIdentifier: "exitToSingIn", sender: nil)
-            
-        } catch {
-        print("Error")
-           
-        }
-        
-        
-        
-       
+
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return FData.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = FData[indexPath.row]
+        return cell
+    }
+    
+   
     
 }
