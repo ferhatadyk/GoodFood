@@ -27,10 +27,10 @@ class HomeViewController: UIViewController {
     ]
     
     var populars: [Dish] = [
-        .init(id: "id1", name: "Pizza", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
-        .init(id: "id1", name: "Hamburger", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
-        .init(id: "id1", name: "Lahmacun", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
-        .init(id: "id1", name: "Coffee", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
+        .init(id: "id1", name: "Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
+        .init(id: "id1", name: "Hamburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
+        .init(id: "id1", name: "Lahmacun", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
+        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
 
     
     

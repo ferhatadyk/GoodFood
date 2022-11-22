@@ -18,7 +18,7 @@ class DishDetailViewController: UIViewController {
     @IBOutlet weak var descriptionlbl: UILabel!
     
     @IBOutlet weak var noteTextField: UITextField!
-    
+
     var dish: Dish!
     
     override func viewDidLoad() {

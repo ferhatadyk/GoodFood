@@ -34,24 +34,25 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="OnJ-Fu-qNk">
-                                <rect key="frame" x="92.000000000000014" y="16" width="243.33333333333337" height="68"/>
+                                <rect key="frame" x="92" y="16" width="48.333333333333343" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizzanı Yarat..........................." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190.69999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-KJ-UGs">
-                                        <rect key="frame" x="0.0" y="0.0" width="243.33333333333334" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190.69999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-KJ-UGs">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-mO-OmX">
-                                        <rect key="frame" x="0.0" y="51" width="243.33333333333334" height="17"/>
+                                        <rect key="frame" x="0.0" y="51" width="48.333333333333336" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkQ-WL-w2b">
-                                <rect key="frame" x="349.33333333333331" y="33" width="49.666666666666686" height="34.333333333333343"/>
+                                <rect key="frame" x="154.33333333333337" y="33" width="244.66666666666663" height="34.333333333333343"/>
                                 <color key="tintColor" name="Color 1"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
