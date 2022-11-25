@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
-    let data = ["Hesabım","Ödeme yöntemi ","Adres ","Sıkça Sorulan Sorular","Çıkış yap"]
+    let data = ["Account","Payment Methods","Address ","Log Out"]
     var FData: [String]!
 
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
        tableView.delegate = self
         tableView.dataSource = self
         
+        title = "Settings"
     }
     
 }

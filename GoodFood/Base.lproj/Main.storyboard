@@ -528,7 +528,7 @@
             </objects>
             <point key="canvasLocation" x="2624.6376811594205" y="265.84821428571428"/>
         </scene>
-        <!--Order-->
+        <!--Orders View Controller-->
         <scene sceneID="taH-wX-XwF">
             <objects>
                 <viewController storyboardIdentifier="OrdersViewController" id="9FI-lD-3sk" customClass="OrdersViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -537,7 +537,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-Tn-nZK">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9FI-lD-3sk" id="uVQ-zt-39M"/>
@@ -554,24 +554,48 @@
                             <constraint firstItem="gMR-Tn-nZK" firstAttribute="trailing" secondItem="iGg-em-ukE" secondAttribute="trailing" id="tTl-76-kwf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Order" id="XeU-bC-vG7">
-                        <imageReference key="image" image="basket" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color name="Color 1"/>
-                                <color name="Color 1"/>
-                                <color name="Color 1"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="I2N-En-D78"/>
                     <connections>
                         <outlet property="tableView" destination="gMR-Tn-nZK" id="tpt-kY-kcp"/>
+                        <segue destination="e4f-t9-7DS" kind="presentation" identifier="orderLastDetailsVC" modalPresentationStyle="fullScreen" id="TSV-xj-3Gd"/>
+                        <segue destination="BSx-1O-6Bv" kind="presentation" identifier="orderTrackingVC" modalPresentationStyle="fullScreen" id="ryW-Z9-DFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKb-ov-a2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650.7246376811595" y="976.33928571428567"/>
+            <point key="canvasLocation" x="3560.8695652173915" y="976.33928571428567"/>
         </scene>
-        <!--Settings-->
+        <!--Order Last Details View Controller-->
+        <scene sceneID="SUq-N0-S4f">
+            <objects>
+                <viewController id="e4f-t9-7DS" customClass="orderLastDetailsViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vUC-ZI-LRb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XNL-2A-ZJq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo6-kT-zL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4418.840579710145" y="975.66964285714278"/>
+        </scene>
+        <!--Order Tracking View Controller-->
+        <scene sceneID="tDI-fa-Tel">
+            <objects>
+                <viewController id="BSx-1O-6Bv" customClass="orderTrackingViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="942-g4-25H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tem-9U-Ujk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qug-QI-mgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5403" y="976"/>
+        </scene>
+        <!--Settings View Controller-->
         <scene sceneID="63r-17-VQO">
             <objects>
                 <viewController id="sQP-pa-QxD" customClass="SettingsViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -580,7 +604,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="5" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-Hy-g3W">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="l8Q-Qt-sus" detailTextLabel="uwW-DL-065" style="IBUITableViewCellStyleSubtitle" id="t9w-Rp-Uc8">
@@ -619,23 +643,63 @@
                             <constraint firstItem="iPg-Hy-g3W" firstAttribute="leading" secondItem="J88-qS-wNL" secondAttribute="leading" id="q1E-7F-GZC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="qxy-ag-6Nw">
-                        <imageReference key="image" image="person.bust.fill" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color name="Color 1"/>
-                                <color name="Color 1"/>
-                                <color name="Color 1"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="bhe-N4-mix"/>
                     <connections>
                         <outlet property="tableView" destination="iPg-Hy-g3W" id="64m-LX-OwT"/>
                         <segue destination="iMl-5X-ld9" kind="presentation" identifier="exitToSingIn" modalPresentationStyle="fullScreen" id="kqD-Gn-IK7"/>
+                        <segue destination="Lja-ms-10e" kind="presentation" identifier="accountVC" modalPresentationStyle="fullScreen" id="kIc-Pj-QHK"/>
+                        <segue destination="WXe-M4-bVq" kind="presentation" identifier="paymentVC" modalPresentationStyle="fullScreen" id="apQ-p7-lYU"/>
+                        <segue destination="UUc-P3-NQx" kind="presentation" identifier="addressVC" modalPresentationStyle="fullScreen" id="ZFh-zS-tMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Ar-T71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="-1103"/>
+            <point key="canvasLocation" x="3510.144927536232" y="-1103.5714285714284"/>
+        </scene>
+        <!--Address View Controller-->
+        <scene sceneID="it5-fo-Kok">
+            <objects>
+                <viewController id="UUc-P3-NQx" customClass="addressViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2W-If-Tfk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fw0-md-BVj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amK-H6-83p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6296" y="-1104"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="1Xg-eC-JCh">
+            <objects>
+                <viewController id="Lja-ms-10e" customClass="accountViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ByM-lw-Ark">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yds-F7-TZA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJh-kz-IpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4439" y="-1104"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="Rfk-dw-UcK">
+            <objects>
+                <viewController id="WXe-M4-bVq" customClass="paymentViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rJw-5B-lOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z9Q-mW-FyN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOm-ch-L1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5403" y="-1104"/>
         </scene>
         <!--Home-->
         <scene sceneID="3Bu-Md-LM2">
@@ -650,10 +714,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" name="Color 1"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="GoodFood" style="editor" id="35r-c5-Gyp"/>
+                                    <navigationItem title="GoodFood" largeTitleDisplayMode="always" id="35r-c5-Gyp"/>
                                 </items>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -957,7 +1021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqj-gl-8to" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3377" y="-410"/>
+            <point key="canvasLocation" x="3510" y="-396"/>
         </scene>
         <!--List Dishes View Controller-->
         <scene sceneID="sgw-NO-nyv">
@@ -991,7 +1055,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNJ-7D-oNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4106" y="-410"/>
+            <point key="canvasLocation" x="4438" y="-396"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AMB-Lc-qZN">
@@ -1006,8 +1070,8 @@
                     <connections>
                         <segue destination="oyc-sU-JAM" kind="relationship" relationship="viewControllers" id="eea-oM-CYD"/>
                         <segue destination="G3Z-nS-5gN" kind="relationship" relationship="viewControllers" id="uCr-sh-yY6"/>
-                        <segue destination="9FI-lD-3sk" kind="relationship" relationship="viewControllers" id="Dvc-tB-hPz"/>
-                        <segue destination="sQP-pa-QxD" kind="relationship" relationship="viewControllers" id="353-U7-nZX"/>
+                        <segue destination="iBi-6E-02L" kind="relationship" relationship="viewControllers" id="Dvc-tB-hPz"/>
+                        <segue destination="1LX-aY-sNZ" kind="relationship" relationship="viewControllers" id="353-U7-nZX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Iz-24-3KZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1147,6 +1211,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBe-mD-8RK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.6376811594205" y="655.58035714285711"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="6GE-Nq-gpg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1LX-aY-sNZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="qxy-ag-6Nw">
+                        <imageReference key="image" image="person.bust.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k69-Nf-MSb">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sQP-pa-QxD" kind="relationship" relationship="rootViewController" id="n4Q-ys-NBn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9v-Jp-hXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600" y="-1103.5714285714284"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="ho9-ho-JUs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iBi-6E-02L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Order" id="XeU-bC-vG7">
+                        <imageReference key="image" image="basket" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                                <color name="Color 1"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cwW-kC-Xhg">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9FI-lD-3sk" kind="relationship" relationship="rootViewController" id="M8g-MG-faI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsv-0D-H6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650.7246376811595" y="976.33928571428567"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
