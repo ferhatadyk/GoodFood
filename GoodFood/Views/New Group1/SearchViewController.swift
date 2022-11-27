@@ -9,7 +9,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    let data = ["Tonno Pizza", "Islak Hamburger", "Sushi", "Fındık Lahmacun","Karışık Pizza","Chessburger","Midye","Tavuklu Cheddarlı Salata","Filtre Kahve","Soda"]
+    var data = ["Tonno Pizza", "Islak Hamburger", "Sushi", "Fındık Lahmacun","Karışık Pizza","Chessburger","Midye","Tavuklu Cheddarlı Salata","Filtre Kahve","Soda"]
+    
     var filteredData: [String]!
 
     @IBOutlet weak var searchBar: UISearchBar!

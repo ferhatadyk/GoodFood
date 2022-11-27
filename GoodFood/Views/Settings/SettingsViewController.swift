@@ -9,15 +9,15 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
-    let data = ["Account","Payment Methods","Address ","Log Out"]
-    var FData: [String]!
+    
+   var data = [String]()
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        FData = data
+         data = ["Account","Payment Methods","Address ","Log Out"]
+      
        tableView.delegate = self
         tableView.dataSource = self
         
@@ -29,12 +29,12 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FData.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = FData[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row]
         return cell
     }
     
