@@ -51,30 +51,63 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkQ-WL-w2b">
-                                <rect key="frame" x="154.33333333333337" y="33" width="244.66666666666663" height="34.333333333333343"/>
-                                <color key="tintColor" name="Color 1"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkQ-WL-w2b">
+                                <rect key="frame" x="154.33333333333337" y="4" width="244.66666666666663" height="34.333333333333336"/>
+                                <color key="backgroundColor" name="wh"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="r5V-EN-n6j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w40-Sj-4sV">
+                                <rect key="frame" x="154" y="56" width="244.66666666666663" height="34.333333333333343"/>
+                                <color key="backgroundColor" name="wh"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gGS-ms-P2b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vu-hZ-buu">
+                                <rect key="frame" x="273" y="39" width="6.6666666666666856" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7jK-gQ-u1n" firstAttribute="top" secondItem="kFH-J9-Uyt" secondAttribute="top" constant="16" id="5IM-63-gHn"/>
+                            <constraint firstItem="2vu-hZ-buu" firstAttribute="centerX" secondItem="w40-Sj-4sV" secondAttribute="centerX" constant="-0.33333333333331439" id="CHO-aO-Ort"/>
                             <constraint firstAttribute="bottom" secondItem="7jK-gQ-u1n" secondAttribute="bottom" constant="16" id="D02-m9-mpA"/>
                             <constraint firstItem="7jK-gQ-u1n" firstAttribute="leading" secondItem="kFH-J9-Uyt" secondAttribute="leading" constant="16" id="NXn-wv-o0O"/>
                             <constraint firstAttribute="bottom" secondItem="7jK-gQ-u1n" secondAttribute="bottom" constant="14" id="QRx-vp-Fyc"/>
                             <constraint firstItem="7jK-gQ-u1n" firstAttribute="leading" secondItem="kFH-J9-Uyt" secondAttribute="leading" constant="16" id="RN6-ze-Wt7"/>
-                            <constraint firstAttribute="trailing" secondItem="NkQ-WL-w2b" secondAttribute="trailing" constant="0.99999999999994316" id="TNl-uP-HFW"/>
                             <constraint firstItem="7jK-gQ-u1n" firstAttribute="top" secondItem="kFH-J9-Uyt" secondAttribute="top" constant="16" id="UoJ-eq-uaD"/>
+                            <constraint firstAttribute="trailing" secondItem="NkQ-WL-w2b" secondAttribute="trailing" constant="1" id="UyL-kc-gNs"/>
                             <constraint firstItem="OnJ-Fu-qNk" firstAttribute="top" secondItem="kFH-J9-Uyt" secondAttribute="top" constant="16" id="WdE-RD-pJT"/>
+                            <constraint firstItem="NkQ-WL-w2b" firstAttribute="top" secondItem="kFH-J9-Uyt" secondAttribute="top" constant="4" id="ayH-nj-Fnq"/>
                             <constraint firstAttribute="width" constant="400" id="dvc-0R-AnH"/>
-                            <constraint firstItem="NkQ-WL-w2b" firstAttribute="leading" secondItem="OnJ-Fu-qNk" secondAttribute="trailing" constant="14.000000000000114" id="oZf-9U-g1U"/>
+                            <constraint firstItem="NkQ-WL-w2b" firstAttribute="centerX" secondItem="w40-Sj-4sV" secondAttribute="centerX" id="fH4-xJ-1GD"/>
+                            <constraint firstItem="w40-Sj-4sV" firstAttribute="top" secondItem="NkQ-WL-w2b" secondAttribute="bottom" constant="17.666666666666657" id="i9P-a6-uYD"/>
+                            <constraint firstItem="2vu-hZ-buu" firstAttribute="top" secondItem="NkQ-WL-w2b" secondAttribute="bottom" constant="0.6666666666666643" id="lTJ-LW-XCs"/>
+                            <constraint firstItem="w40-Sj-4sV" firstAttribute="leading" secondItem="OnJ-Fu-qNk" secondAttribute="trailing" constant="13.666666666666657" id="nmO-vN-wM1"/>
+                            <constraint firstItem="NkQ-WL-w2b" firstAttribute="leading" secondItem="OnJ-Fu-qNk" secondAttribute="trailing" constant="14.000000000000028" id="pFd-ST-MtP"/>
                             <constraint firstItem="OnJ-Fu-qNk" firstAttribute="leading" secondItem="7jK-gQ-u1n" secondAttribute="trailing" constant="8" id="psE-Qq-IHW"/>
                             <constraint firstAttribute="bottom" secondItem="7jK-gQ-u1n" secondAttribute="bottom" constant="16" id="rrD-U7-lyP"/>
-                            <constraint firstItem="NkQ-WL-w2b" firstAttribute="centerY" secondItem="OnJ-Fu-qNk" secondAttribute="centerY" id="yEC-f6-2xX"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -96,8 +129,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="Color 1">
-            <color red="0.86699998378753662" green="0.48600000143051147" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="wh">
+            <color red="0.97299998998641968" green="0.96899998188018799" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

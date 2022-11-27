@@ -13,12 +13,9 @@ class OrdersViewController: UIViewController {
     
     var orders: [Order] = [
         
-        .init(id: "id", name: "Ferhat adiyeke", dish:   .init(id: "id1", name: "Pizza", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75)),
-        .init(id: "id", name: "Zeynep adiyeke", dish:   .init(id: "id1", name: "Sushi", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75)),
-        .init(id: "id", name: "Eylül adiyeke", dish:   .init(id: "id1", name: "Lahmacun", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75)),
-        .init(id: "id", name: "Ahmet adiyeke", dish:   .init(id: "id1", name: "Tonno Pizza", description: "Ücretsiz teslimat", image: #imageLiteral(resourceName: "pizzeria"), price: 75))
-
-    
+        .init(id: "id", name: "Ferhat adiyeke", dish:   .init(id: "id1", name: "Tonno Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75)),
+        .init(id: "id", name: "Ferhat adiyeke", dish:   .init(id: "id1", name: "Soup", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 45)),
+        .init(id: "id", name: "Zeynep adiyeke", dish:   .init(id: "id1", name: "Cheeseburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75))
     ]
     
     override func viewDidLoad() {
@@ -34,6 +31,13 @@ registerCells()
         tableView.register(UINib(nibName: DishListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: DishListTableViewCell.identifier)
     }
 
+    
+    @IBAction func switchBtn(_ sender: UISwitch) {
+    }
+    
+    @IBAction func AddOrderBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "orderLastDetailsVC", sender: nil)
+    }
 }
 
 
@@ -63,6 +67,7 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
         controller.dish = orders[indexPath.row].dish
         
         tabBarController?.present(controller, animated: true, completion: nil)
+        
     }
     
 }
