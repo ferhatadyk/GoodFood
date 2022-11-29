@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220BC9A529362178008BD339 /* addAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BC9A429362178008BD339 /* addAdressViewController.swift */; };
+		220BC9A729362196008BD339 /* addCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BC9A629362196008BD339 /* addCardViewController.swift */; };
 		22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22338CA62906BD90007AC52A /* ExtensionUIView.swift */; };
 		22338CA92906BE67007AC52A /* onboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22338CA82906BE67007AC52A /* onboardingSlide.swift */; };
 		22338CAB2906C4B0007AC52A /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22338CAA2906C4B0007AC52A /* OnboardingCollectionViewCell.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		148517BEF8B5D4F31DACD464 /* Pods-GoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.debug.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.debug.xcconfig"; sourceTree = "<group>"; };
+		220BC9A429362178008BD339 /* addAdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addAdressViewController.swift; sourceTree = "<group>"; };
+		220BC9A629362196008BD339 /* addCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCardViewController.swift; sourceTree = "<group>"; };
 		22338CA62906BD90007AC52A /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		22338CA82906BE67007AC52A /* onboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingSlide.swift; sourceTree = "<group>"; };
 		22338CAA2906C4B0007AC52A /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -284,7 +288,9 @@
 				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
 				2250EBDB29312A27002C565D /* accountViewController.swift */,
 				2250EBDD29312A37002C565D /* addressViewController.swift */,
+				220BC9A429362178008BD339 /* addAdressViewController.swift */,
 				2250EBDF29312A48002C565D /* paymentViewController.swift */,
+				220BC9A629362196008BD339 /* addCardViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -475,12 +481,14 @@
 				2250EBE029312A48002C565D /* paymentViewController.swift in Sources */,
 				22DBBBA42911842900D07F24 /* DishDetailViewController.swift in Sources */,
 				22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */,
+				220BC9A729362196008BD339 /* addCardViewController.swift in Sources */,
 				22E2108E290C4C82001D0516 /* CategoryCollectionViewCell.swift in Sources */,
 				22FEA340290D89D10002CEED /* CardView.swift in Sources */,
 				22DBBBB02911971700D07F24 /* ListDishesViewController.swift in Sources */,
 				22A2A8BE290A8D6D005639A6 /* HomeViewController.swift in Sources */,
 				22DBBBA62911863C00D07F24 /* UIViewControllerExtension.swift in Sources */,
 				22FEA34A290D917D0002CEED /* DishPortraitCollectionViewCell.swift in Sources */,
+				220BC9A529362178008BD339 /* addAdressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

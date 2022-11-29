@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         data = ["Account","Payment Methods","Address ","Log Out"]
+         data = ["Account","Payment Methods","Address "]
       
        tableView.delegate = self
         tableView.dataSource = self
@@ -24,6 +24,24 @@ class SettingsViewController: UIViewController {
         title = "Settings"
     }
     
+    @IBAction func logoutBtn(_ sender: UIButton) {
+        do {
+                  
+                  try Auth.auth().signOut()
+                  performSegue(withIdentifier: "exitToSingIn", sender: nil)
+                  
+              } catch {
+              print("Error")
+                 
+              }
+              
+              
+              
+             
+          
+        
+        
+    }
 }
 
 
