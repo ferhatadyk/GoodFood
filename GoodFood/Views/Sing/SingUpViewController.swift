@@ -27,46 +27,64 @@ class SingUpViewController: UIViewController {
         view.addGestureRecognizer(keyboardRecognizer)
     }
     
-
+ 
     @objc func keyboardSecret() {
         view.endEditing(true)
         
     }
     
-    
-    @IBAction func singUpClicked(_ sender: UIButton) {
-       
-        if nameSurnameTxtField.text != "" && singUpAdressTextfield.text != "" && singUpEmailTextField.text != "" &&
-            telTextField.text != "" &&
-            singUpPasswordTextField.text != "" {
-            Auth.auth().createUser(withEmail: singUpEmailTextField.text!, password: singUpPasswordTextField.text!) { (authdataresult, error) in
-                if error != nil {
-                       
-                    self.errorMessage(titleInput: "Error", messageInput: error?.localizedDescription ?? "You got an error please try again.")
-                   
-                }
-                else {
-                    self.performSegue(withIdentifier: "doneSingUp", sender: nil)
-                }
-            }
-        }else {
-            errorMessage(titleInput: "Error!", messageInput: "Please enter your information.")
-                
-            
-        }
-        
-        
-    }
-    
-    func errorMessage(titleInput: String, messageInput: String) {
+   private func errorMessage(titleInput: String, messageInput: String) {
         let alert  = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         let OKBtn = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
         alert .addAction(OKBtn)
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK--
+    
+    @IBAction func singUpClicked(_ sender: UIButton) {
+        
+        let name = nameSurnameTxtField.text!
+        let eposta = singUpEmailTextField.text!
+        let address = singUpAdressTextfield.text!
+        let password = singUpPasswordTextField.text!
+        let phone = telTextField.text!
+       
+        if nameSurnameTxtField.text != "" && singUpAdressTextfield.text != "" && singUpEmailTextField.text != "" &&
+            telTextField.text != "" &&
+            singUpPasswordTextField.text != "" {
+            Auth.auth().createUser(withEmail: singUpEmailTextField.text!, password: singUpPasswordTextField.text!) { (authdataresult, error) in
+                
+                if error != nil {
+                       
+                self.errorMessage(titleInput: "Error", messageInput: error?.localizedDescription ?? "You got an error please try again.")
+                }else{
+                   
+                    
+                    
+                    let userData = ["uid":Auth.auth().currentUser!.uid,
+                                    "name":name,
+                                    "eposta":eposta,
+                                    "address":address,
+                                    "password":password,
+                                    "phone":phone]
+                    
+                    
+                    let databaseRef = Database.database().reference()
+                    databaseRef.child("users").childByAutoId().setValue(userData)
+                    self.performSegue(withIdentifier: "doneSingUp", sender: nil)
+                }
+            }
+            
+        }else{
+            errorMessage(titleInput: "Error!", messageInput: "Please enter your information.")
+        }
+    }
+    
+    
     @IBAction func toSingInDont(_ sender: UIButton) {
         performSegue(withIdentifier: "toAlreadySingIn", sender: nil)
     }
+    
     
 }

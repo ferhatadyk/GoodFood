@@ -25,19 +25,23 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
-        do {
-                  
-                  try Auth.auth().signOut()
-                  performSegue(withIdentifier: "exitToSingIn", sender: nil)
-                  
-              } catch {
-              print("Error")
-                 
-              }
+       
               
+        let alert = UIAlertController(title: "Log Out", message: "Account Log Out", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction)  in
+            do {
+                      
+                      try Auth.auth().signOut()
+                self.performSegue(withIdentifier: "exitToSingIn", sender: nil)
+                      
+                  } catch {
+                  print("Error")
+                     
+                  }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
               
-              
-             
           
         
         

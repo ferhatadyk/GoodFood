@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2202A094293917C100740F75 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2202A093293917C100740F75 /* Users.swift */; };
 		220BC9A529362178008BD339 /* addAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BC9A429362178008BD339 /* addAdressViewController.swift */; };
 		220BC9A729362196008BD339 /* addCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BC9A629362196008BD339 /* addCardViewController.swift */; };
 		22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22338CA62906BD90007AC52A /* ExtensionUIView.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		148517BEF8B5D4F31DACD464 /* Pods-GoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.debug.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.debug.xcconfig"; sourceTree = "<group>"; };
+		2202A093293917C100740F75 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		220BC9A429362178008BD339 /* addAdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addAdressViewController.swift; sourceTree = "<group>"; };
 		220BC9A629362196008BD339 /* addCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCardViewController.swift; sourceTree = "<group>"; };
 		22338CA62906BD90007AC52A /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				22E21090290C4E7F001D0516 /* DishCategory.swift */,
 				22FEA34C290E8CB20002CEED /* Dish.swift */,
 				224D6F7A2912B59000485DD0 /* Order.swift */,
+				2202A093293917C100740F75 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				22A2A8BC290A8D55005639A6 /* OrdersViewController.swift in Sources */,
 				22A2A8BA290A8BDB005639A6 /* SettingsViewController.swift in Sources */,
 				2250EBDC29312A27002C565D /* accountViewController.swift in Sources */,
+				2202A094293917C100740F75 /* Users.swift in Sources */,
 				22DBBBAC2911911F00D07F24 /* DishListTableViewCell.swift in Sources */,
 				2239B1C02906AE39007BA8E4 /* SceneDelegate.swift in Sources */,
 				22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */,

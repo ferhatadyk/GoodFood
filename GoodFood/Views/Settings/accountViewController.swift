@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class accountViewController: UIViewController {
 
@@ -16,14 +17,25 @@ class accountViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func accountDeleteBtn(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Delete", message: "Account Delete", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction)  in
+            do {
+                      
+                      try Auth.auth().signOut()
+                self.performSegue(withIdentifier: "exitToSingIn", sender: nil)
+                      
+                  } catch {
+                  print("Error")
+                     
+                  }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+              
+          
+        
+        
     }
-    */
-
-}
+        
+    }
