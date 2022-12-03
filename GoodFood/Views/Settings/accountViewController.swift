@@ -9,14 +9,61 @@ import UIKit
 import Firebase
 
 class accountViewController: UIViewController {
-
+    let databaseRef = Database.database(url: "https://goodfood-718da-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+    
+    
+    @IBAction func closeBtn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var mailLbl: UILabel!
+    @IBOutlet weak var passwordLbl: UILabel!
+    @IBOutlet weak var telLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
+        
+        databaseRef.child("users").queryOrdered(byChild: "uid").queryEqual(toValue: Auth.auth().currentUser!.uid).observeSingleEvent(of: .value)  { (snapshot) in
+       
+            for child in snapshot.children{
+                let snap = child as! DataSnapshot
+                let dict = snap.value as! NSDictionary
+                
+                var name = ""
+                name += dict["name"] as! String + "\n"
+                self.nameLbl.text = name
+                
+               var mail = ""
+                mail += dict["eposta"] as! String + "\n"
+                self.mailLbl.text = mail
+                
+                var password = ""
+                password += dict["password"] as! String + "\n"
+                self.passwordLbl.text = password
+                
+                var phone = ""
+                phone += dict["phone"] as! String + "\n"
+                self.telLbl.text = phone
+               
+            }
 
-        // Do any additional setup after loading the view.
+        }
+       
     }
     
 
+      
+  
+    
+    
+    @IBAction func editButton(_ sender: UIButton) {
+    
+    performSegue(withIdentifier: "accountDetailsVc", sender: nil)
+    
+    }
+    
     @IBAction func accountDeleteBtn(_ sender: UIButton) {
         let alert = UIAlertController(title: "Delete", message: "Account Delete", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction)  in

@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 class SingUpViewController: UIViewController {
     
     
@@ -18,13 +19,16 @@ class SingUpViewController: UIViewController {
     @IBOutlet var telTextField: UITextField!
     
     
-    
+    let databaseRef = Database.database(url: "https://goodfood-718da-default-rtdb.europe-west1.firebasedatabase.app/").reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if FirebaseApp.app() == nil {
+             FirebaseApp.configure()
+         }
         let keyboardRecognizer = UITapGestureRecognizer(target: self, action: #selector(keyboardSecret))
         view.addGestureRecognizer(keyboardRecognizer)
+        
     }
     
  
@@ -70,8 +74,8 @@ class SingUpViewController: UIViewController {
                                     "phone":phone]
                     
                     
-                    let databaseRef = Database.database().reference()
-                    databaseRef.child("users").childByAutoId().setValue(userData)
+                   
+                    self.databaseRef.child("users").childByAutoId().setValue(userData)
                     self.performSegue(withIdentifier: "doneSingUp", sender: nil)
                 }
             }

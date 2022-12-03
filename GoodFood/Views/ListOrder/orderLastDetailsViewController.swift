@@ -17,6 +17,23 @@ class orderLastDetailsViewController: UIViewController {
     
 
    
+    
+    
+    
+    @IBAction func adressEdit(_ sender: UIButton) {
+        performSegue(withIdentifier: "deliveryAddressVC", sender: nil)
+    }
+    
+    @IBAction func temazsızSwitch(_ sender: UISwitch) {
+    }
+    
+    @IBAction func cardAddBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "paymentChangeVC", sender: nil)
+    }
+    
+    @IBAction func agreementSwitch(_ sender: UISwitch) {
+    }
+    
     @IBAction func createOrder(_ sender: UIButton) {
         performSegue(withIdentifier: "TrackingVC", sender: nil)
     }

@@ -9,6 +9,9 @@ import UIKit
 
 class addCardViewController: UIViewController {
 
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

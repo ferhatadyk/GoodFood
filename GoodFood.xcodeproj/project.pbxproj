@@ -28,6 +28,7 @@
 		225DAB542909809600663797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225DAB532909809600663797 /* GoogleService-Info.plist */; };
 		2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A85D29099D4F004CD620 /* SignInViewController.swift */; };
 		2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A86029099EB1004CD620 /* SingUpViewController.swift */; };
+		228011D7293BB59700DB9156 /* editAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228011D6293BB59700DB9156 /* editAccountViewController.swift */; };
 		22A20D2E290ED17100910938 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */; };
 		22A20D2F290ED17100910938 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */; };
 		22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */; };
@@ -76,6 +77,7 @@
 		225DAB532909809600663797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2260A85D29099D4F004CD620 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2260A86029099EB1004CD620 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		228011D6293BB59700DB9156 /* editAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editAccountViewController.swift; sourceTree = "<group>"; };
 		22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		22A2A8B7290A6B1A005639A6 /* ForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				22A2A8B9290A8BDB005639A6 /* SettingsViewController.swift */,
 				2250EBDB29312A27002C565D /* accountViewController.swift */,
+				228011D6293BB59700DB9156 /* editAccountViewController.swift */,
 				2250EBDD29312A37002C565D /* addressViewController.swift */,
 				220BC9A429362178008BD339 /* addAdressViewController.swift */,
 				2250EBDF29312A48002C565D /* paymentViewController.swift */,
@@ -482,6 +485,7 @@
 				2250EBE429312D15002C565D /* orderTrackingViewController.swift in Sources */,
 				2239B1D62906B336007BA8E4 /* OnboardingViewController.swift in Sources */,
 				22338CAB2906C4B0007AC52A /* OnboardingCollectionViewCell.swift in Sources */,
+				228011D7293BB59700DB9156 /* editAccountViewController.swift in Sources */,
 				2250EBE029312A48002C565D /* paymentViewController.swift in Sources */,
 				22DBBBA42911842900D07F24 /* DishDetailViewController.swift in Sources */,
 				22A2A8B8290A6B1A005639A6 /* ForgetViewController.swift in Sources */,
