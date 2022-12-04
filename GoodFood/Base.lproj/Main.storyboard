@@ -1141,7 +1141,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1161,7 +1161,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1176,7 +1176,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1191,7 +1191,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1561,9 +1561,6 @@
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
-                                <items>
-                                    <navigationItem title="GoodFood" largeTitleDisplayMode="always" id="35r-c5-Gyp"/>
-                                </items>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -1734,6 +1731,22 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Q7A-1W-9cA"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="SYP-EY-ljg"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-Gq-Dy3">
+                                <rect key="frame" x="9" y="36" width="107" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="good" highlightedImage="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="ETw-TN-XSW">
+                                <rect key="frame" x="114" y="32" width="187" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nrT-9e-5sy"/>
                         <color key="backgroundColor" name="Color"/>
@@ -1760,6 +1773,7 @@
                     <connections>
                         <outlet property="allMealsCollectionView" destination="cBH-aA-Ofh" id="yVb-37-XNJ"/>
                         <outlet property="categoryCollectionView" destination="Toi-u8-JoS" id="Z1J-u0-DF1"/>
+                        <outlet property="navName" destination="7eH-Gq-Dy3" id="ZIJ-V5-dyt"/>
                         <outlet property="popularCollectionsView" destination="g2a-ko-7Vd" id="d1K-pu-aHr"/>
                     </connections>
                 </viewController>
@@ -1843,9 +1857,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f5-mO-RyW">
+                                <rect key="frame" x="16" y="50" width="41" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="wh"/>
+                                <color key="tintColor" name="Color 1"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="close:" destination="3Ro-Dh-5gg" eventType="touchUpInside" id="OdF-ym-wxg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GhL-4f-cks"/>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IgI-zF-IbH" firstAttribute="top" secondItem="Adz-i1-42O" secondAttribute="bottom" constant="16" id="3En-J0-ctC"/>
                             <constraint firstItem="GhL-4f-cks" firstAttribute="bottom" secondItem="IgI-zF-IbH" secondAttribute="bottom" constant="16" id="DxQ-sA-2yU"/>
@@ -2113,6 +2142,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="KTi-7o-Oon"/>
         <segue reference="Bg1-TA-oB0"/>
         <segue reference="D0k-6d-AtB"/>
         <segue reference="NU2-hq-4xE"/>
@@ -2123,6 +2153,7 @@
     <resources>
         <image name="appstore" width="512" height="512"/>
         <image name="basket" catalog="system" width="128" height="108"/>
+        <image name="good" width="1024" height="1024"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="onboardingMotor" width="1000" height="1000"/>

@@ -38,6 +38,9 @@ class DishDetailViewController: UIViewController {
         
     }
     
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func addClicked(_ sender: UIButton) {
     }

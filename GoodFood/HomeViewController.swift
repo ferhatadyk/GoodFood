@@ -6,55 +6,62 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
 
     @IBOutlet var categoryCollectionView: UICollectionView!
-    
     @IBOutlet weak var popularCollectionsView: UICollectionView!
-    
-    
     @IBOutlet weak var allMealsCollectionView: UICollectionView!
+    @IBOutlet weak var navName: UILabel!
     
+    let databaseRef = Database.database(url: "https://goodfood-718da-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Pizza", image: #imageLiteral(resourceName: "pizzeria") ),
         .init(id: "id1", name: "Hamburger", image: #imageLiteral(resourceName: "burger2")),
         .init(id: "id1", name: "Turkish", image: #imageLiteral(resourceName: "turk")),
         .init(id: "id1", name: "Coffee", image: #imageLiteral(resourceName: "coffee")),
         .init(id: "id1", name: "Cake", image: #imageLiteral(resourceName: "kebap")),
-        .init(id: "id1", name: "Sushi", image: #imageLiteral(resourceName: "kebap"))
-        
-    ]
+        .init(id: "id1", name: "Sushi", image: #imageLiteral(resourceName: "kebap"))]
     
     var populars: [Dish] = [
-        .init(id: "id1", name: "Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
-        .init(id: "id1", name: "Hamburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
-        .init(id: "id1", name: "Lahmacun", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
-        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
-
-    
-    
-    ]
+        .init(id: "id1", name: "Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, ", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
+        .init(id: "id1", name: "Hamburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
+        .init(id: "id1", name: "Lahmacun", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
+        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber", image: #imageLiteral(resourceName: "pizzeria"), price: 34)]
         
     var specials: [Dish] = [
-        .init(id: "id1", name: "Tonno Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
+        .init(id: "id1", name: "Tonno Pizza", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber", image: #imageLiteral(resourceName: "pizzeria"), price: 75),
         .init(id: "id1", name: "Hamburger", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 45),
         .init(id: "id1", name: "Lahmacun", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 67),
-        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 34)
-    ]
-    
-    
-    
-    
+        .init(id: "id1", name: "Coffee", description: "Domates sos, mozzarella peyniri, ton balığı, yeşilbiber, mısır", image: #imageLiteral(resourceName: "pizzeria"), price: 34)]
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
+        
+        
     registerCells()
+        databaseRef.child("users").queryOrdered(byChild: "uid").queryEqual(toValue: Auth.auth().currentUser!.uid).observeSingleEvent(of: .value)  { (snapshot) in
+       
+            for child in snapshot.children{
+                let snap = child as! DataSnapshot
+                let dict = snap.value as! NSDictionary
+                
+                var name = ""
+                name += dict["address"] as! String + "\n"
+                self.navName.text = name
+                
+              
+            }
+
+        }
+        
+        
+        
         
     }
     
