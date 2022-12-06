@@ -42,7 +42,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+      /*  let service = NetworkService()
+        let request = service.createRequest(route: .temp, method: .post,
+        parameters: ["firstName": "Ferhat", "lastname": "adiyeke"])
+        print("The URL is: \(request?.url)")
+        print("The body: \(request?.httpBody)") */
         
     registerCells()
         databaseRef.child("users").queryOrdered(byChild: "uid").queryEqual(toValue: Auth.auth().currentUser!.uid).observeSingleEvent(of: .value)  { (snapshot) in
@@ -51,9 +55,9 @@ class HomeViewController: UIViewController {
                 let snap = child as! DataSnapshot
                 let dict = snap.value as! NSDictionary
                 
-                var name = ""
-                name += dict["address"] as! String + "\n"
-                self.navName.text = name
+                var address = ""
+                address += dict["address"] as! String + "\n"
+                self.navName.text = address
                 
               
             }

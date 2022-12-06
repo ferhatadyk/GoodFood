@@ -33,6 +33,8 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
 
         slides = [OnboardingSlide(title: "Get fastest delivery ", description: "Lorem Ipsum is simply dummy text of the printing.", image: #imageLiteral(resourceName: "onboardingMotor")),
          OnboardingSlide(title: "Pick the best food", description: "Lorem Ipsum is simply dummy text of the printing. ", image: #imageLiteral(resourceName: "pizzeria")),

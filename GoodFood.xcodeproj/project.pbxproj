@@ -25,9 +25,14 @@
 		2250EBE029312A48002C565D /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250EBDF29312A48002C565D /* paymentViewController.swift */; };
 		2250EBE229312CFE002C565D /* orderLastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250EBE129312CFE002C565D /* orderLastDetailsViewController.swift */; };
 		2250EBE429312D15002C565D /* orderTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250EBE329312D15002C565D /* orderTrackingViewController.swift */; };
+		2251AAEF293E159F00D2ED70 /* LiveOrderTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251AAEE293E159F00D2ED70 /* LiveOrderTrackingViewController.swift */; };
+		2251AAF1293E15AE00D2ED70 /* HelpingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251AAF0293E15AE00D2ED70 /* HelpingViewController.swift */; };
 		225DAB542909809600663797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225DAB532909809600663797 /* GoogleService-Info.plist */; };
 		2260A85E29099D4F004CD620 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A85D29099D4F004CD620 /* SignInViewController.swift */; };
 		2260A86129099EB1004CD620 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A86029099EB1004CD620 /* SingUpViewController.swift */; };
+		2261EFF8293F7978004CCDA0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261EFF7293F7978004CCDA0 /* NetworkService.swift */; };
+		2261EFFA293F809C004CCDA0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261EFF9293F809C004CCDA0 /* Route.swift */; };
+		2261EFFC293F96F9004CCDA0 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261EFFB293F96F9004CCDA0 /* Method.swift */; };
 		228011D7293BB59700DB9156 /* editAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228011D6293BB59700DB9156 /* editAccountViewController.swift */; };
 		22A20D2E290ED17100910938 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */; };
 		22A20D2F290ED17100910938 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */; };
@@ -74,9 +79,14 @@
 		2250EBDF29312A48002C565D /* paymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
 		2250EBE129312CFE002C565D /* orderLastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderLastDetailsViewController.swift; sourceTree = "<group>"; };
 		2250EBE329312D15002C565D /* orderTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderTrackingViewController.swift; sourceTree = "<group>"; };
+		2251AAEE293E159F00D2ED70 /* LiveOrderTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveOrderTrackingViewController.swift; sourceTree = "<group>"; };
+		2251AAF0293E15AE00D2ED70 /* HelpingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpingViewController.swift; sourceTree = "<group>"; };
 		225DAB532909809600663797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2260A85D29099D4F004CD620 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2260A86029099EB1004CD620 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		2261EFF7293F7978004CCDA0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2261EFF9293F809C004CCDA0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2261EFFB293F96F9004CCDA0 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		228011D6293BB59700DB9156 /* editAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editAccountViewController.swift; sourceTree = "<group>"; };
 		22A20D2C290ED17100910938 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		22A20D2D290ED17100910938 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -135,6 +145,7 @@
 		2239B1BC2906AE39007BA8E4 /* GoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				2261EFF6293F795F004CCDA0 /* Networking */,
 				2239B1D72906BC2E007BA8E4 /* Extension */,
 				2239B1D32906B2D9007BA8E4 /* CustomViews */,
 				2239B1D22906B2D0007BA8E4 /* Views */,
@@ -216,6 +227,16 @@
 			path = Sing;
 			sourceTree = "<group>";
 		};
+		2261EFF6293F795F004CCDA0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2261EFF7293F7978004CCDA0 /* NetworkService.swift */,
+				2261EFF9293F809C004CCDA0 /* Route.swift */,
+				2261EFFB293F96F9004CCDA0 /* Method.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		22A20D2B290ED12F00910938 /* DishLandscapeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +285,8 @@
 				22A2A8BB290A8D55005639A6 /* OrdersViewController.swift */,
 				2250EBE129312CFE002C565D /* orderLastDetailsViewController.swift */,
 				2250EBE329312D15002C565D /* orderTrackingViewController.swift */,
+				2251AAEE293E159F00D2ED70 /* LiveOrderTrackingViewController.swift */,
+				2251AAF0293E15AE00D2ED70 /* HelpingViewController.swift */,
 			);
 			path = ListOrder;
 			sourceTree = "<group>";
@@ -476,8 +499,12 @@
 				2202A094293917C100740F75 /* Users.swift in Sources */,
 				22DBBBAC2911911F00D07F24 /* DishListTableViewCell.swift in Sources */,
 				2239B1C02906AE39007BA8E4 /* SceneDelegate.swift in Sources */,
+				2261EFF8293F7978004CCDA0 /* NetworkService.swift in Sources */,
+				2261EFFC293F96F9004CCDA0 /* Method.swift in Sources */,
 				22338CA72906BD90007AC52A /* ExtensionUIView.swift in Sources */,
+				2251AAEF293E159F00D2ED70 /* LiveOrderTrackingViewController.swift in Sources */,
 				22338CA92906BE67007AC52A /* onboardingSlide.swift in Sources */,
+				2251AAF1293E15AE00D2ED70 /* HelpingViewController.swift in Sources */,
 				224D6F7B2912B59000485DD0 /* Order.swift in Sources */,
 				2250EBDE29312A37002C565D /* addressViewController.swift in Sources */,
 				22FEA34D290E8CB20002CEED /* Dish.swift in Sources */,
@@ -497,6 +524,7 @@
 				22DBBBA62911863C00D07F24 /* UIViewControllerExtension.swift in Sources */,
 				22FEA34A290D917D0002CEED /* DishPortraitCollectionViewCell.swift in Sources */,
 				220BC9A529362178008BD339 /* addAdressViewController.swift in Sources */,
+				2261EFFA293F809C004CCDA0 /* Route.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,4 +24,14 @@ class orderTrackingViewController: UIViewController {
         performSegue(withIdentifier: "backHomeVC", sender: nil)
     }
     
+    
+    @IBAction func liveOrderBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "liveOrderTracking", sender: nil)
+    }
+    
+    @IBAction func supportBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "HelpingVC", sender: nil)
+    }
+    
+    
 }

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -857,6 +858,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="addressLbl" destination="e6m-in-oiH" id="iUt-Yd-XdF"/>
                         <segue destination="BSx-1O-6Bv" kind="presentation" identifier="TrackingVC" modalPresentationStyle="fullScreen" id="9rd-zm-cna"/>
                         <segue destination="UUc-P3-NQx" kind="presentation" identifier="deliveryAddressVC" modalPresentationStyle="fullScreen" id="AfN-rD-sh7"/>
                         <segue destination="WXe-M4-bVq" kind="presentation" identifier="paymentChangeVC" modalPresentationStyle="fullScreen" id="D0k-6d-AtB"/>
@@ -924,7 +926,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa0-Nc-cxe">
-                                <rect key="frame" x="20" y="615" width="374" height="53"/>
+                                <rect key="frame" x="20" y="615" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color 1"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -954,17 +956,110 @@
                                     <action selector="close:" destination="BSx-1O-6Bv" eventType="touchUpInside" id="z0g-GU-DFs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrl-a3-eXg">
+                                <rect key="frame" x="20" y="693" width="374" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Color 1"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Canlı Sipariş Takibi"/>
+                                <connections>
+                                    <action selector="liveOrderBtn:" destination="BSx-1O-6Bv" eventType="touchUpInside" id="YQ6-wG-DFx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCL-Zw-V6o">
+                                <rect key="frame" x="20" y="767" width="374" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Color 1"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sipariş Destek"/>
+                                <connections>
+                                    <action selector="supportBtn:" destination="BSx-1O-6Bv" eventType="touchUpInside" id="T1f-uz-v5u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tem-9U-Ujk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <segue destination="oyc-sU-JAM" kind="presentation" identifier="backHomeVC" modalPresentationStyle="fullScreen" id="Bg1-TA-oB0"/>
+                        <segue destination="iRy-7b-wZt" kind="presentation" identifier="liveOrderTracking" modalPresentationStyle="fullScreen" id="DGt-sv-0t1"/>
+                        <segue destination="E0f-Mk-5zc" kind="presentation" identifier="HelpingVC" id="Aqn-Lo-xEL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qug-QI-mgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5403" y="976"/>
+            <point key="canvasLocation" x="5402.898550724638" y="975.66964285714278"/>
+        </scene>
+        <!--Live Order Tracking View Controller-->
+        <scene sceneID="6bc-h0-Z2r">
+            <objects>
+                <viewController id="iRy-7b-wZt" customClass="LiveOrderTrackingViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOY-qn-esa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rST-4X-670">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic" emphasisStyle="muted" showsTraffic="YES"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-eu-tEw" customClass="CardView" customModule="GoodFood" customModuleProvider="target">
+                                <rect key="frame" x="20" y="667" width="374" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tahmini Varış Zamanı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHg-Nx-u5A">
+                                        <rect key="frame" x="30" y="48" width="178" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-NR-Bhw">
+                                        <rect key="frame" x="278" y="48" width="35" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Color 1"/>
+                                <color key="tintColor" name="wh"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-gr-Ztl">
+                                <rect key="frame" x="20" y="50" width="41" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="wh"/>
+                                <color key="tintColor" name="Color 1"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="closeBtn:" destination="iRy-7b-wZt" eventType="touchUpInside" id="aBY-M0-7CW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2I5-8C-c9d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12W-g0-P54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6211.594202898551" y="975.66964285714278"/>
+        </scene>
+        <!--Helping View Controller-->
+        <scene sceneID="Kfz-XK-NMf">
+            <objects>
+                <viewController id="E0f-Mk-5zc" customClass="HelpingViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vpp-HN-psM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WyH-92-ydV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH7-v0-st2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7019" y="976"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="63r-17-VQO">
@@ -1365,6 +1460,9 @@
                                 <color key="tintColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Yeni Kart Ekle"/>
+                                <connections>
+                                    <action selector="addNewCardBtn:" destination="9lm-rc-xsj" eventType="touchUpInside" id="ynx-Ik-XO2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kart Numarası" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOs-7k-Zb8">
                                 <rect key="frame" x="20" y="226" width="374" height="34"/>
@@ -1400,6 +1498,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-MU-siw">
                                 <rect key="frame" x="15" y="547" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fastPayBtn:" destination="9lm-rc-xsj" eventType="valueChanged" id="Hw4-qW-i3R"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vk-Xf-Wrd">
                                 <rect key="frame" x="21" y="50" width="41" height="32"/>
@@ -1415,6 +1516,12 @@
                         <viewLayoutGuide key="safeArea" id="HCr-Gf-zH4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="cardName" destination="DAV-uU-f7F" id="g2w-5q-TAR"/>
+                        <outlet property="cardNoTextField" destination="UOs-7k-Zb8" id="5ju-Xy-r2h"/>
+                        <outlet property="cvvTextField" destination="NIW-7H-dVR" id="gT2-0k-PQK"/>
+                        <outlet property="dateTextField" destination="5Cp-xw-9KU" id="8Ek-Bp-zFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMZ-Oc-bRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1436,7 +1543,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adres Tipi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTS-h3-jGn">
-                                <rect key="frame" x="20" y="188" width="374" height="34"/>
+                                <rect key="frame" x="20" y="204" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1466,6 +1573,9 @@
                                 <color key="tintColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Yeni Adres Ekle"/>
+                                <connections>
+                                    <action selector="addAddressBtn:" destination="eYn-oI-mVZ" eventType="touchUpInside" id="DAX-AN-9b0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-3e-VU7">
                                 <rect key="frame" x="20" y="50" width="41" height="32"/>
@@ -1481,6 +1591,12 @@
                         <viewLayoutGuide key="safeArea" id="Ah4-qO-JVC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="44Y-SK-ZcP" id="MRL-2T-1Xy"/>
+                        <outlet property="addressType" destination="WTS-h3-jGn" id="ko7-oi-2y0"/>
+                        <outlet property="districtTextField" destination="XvF-n8-itu" id="bQQ-Qx-GPi"/>
+                        <outlet property="provinceTextField" destination="T7s-i0-HFf" id="GFh-ZW-zuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HQ-VV-e01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1555,7 +1671,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-GH-Wxr">
-                                <rect key="frame" x="0.0" y="36" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="36" width="414" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                 <textAttributes key="titleTextAttributes">
@@ -1568,10 +1684,10 @@
                                 </userDefinedRuntimeAttributes>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dsg-7g-sz4">
-                                <rect key="frame" x="0.0" y="80" width="414" height="782"/>
+                                <rect key="frame" x="0.0" y="247" width="414" height="615"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uwy-r6-ssA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="735"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-LQ-uV7">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -1664,7 +1780,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJG-wQ-wua">
-                                                <rect key="frame" x="0.0" y="518" width="414" height="217"/>
+                                                <rect key="frame" x="0.0" y="518" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJg-eI-at9">
                                                         <rect key="frame" x="16" y="16" width="382" height="24"/>
@@ -1673,7 +1789,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-aA-Ofh">
-                                                        <rect key="frame" x="0.0" y="48" width="414" height="169"/>
+                                                        <rect key="frame" x="0.0" y="48" width="414" height="2"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sLe-mS-Er2">
                                                             <size key="itemSize" width="128" height="128"/>
@@ -2142,12 +2258,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KTi-7o-Oon"/>
         <segue reference="Bg1-TA-oB0"/>
         <segue reference="D0k-6d-AtB"/>
         <segue reference="NU2-hq-4xE"/>
         <segue reference="AfN-rD-sh7"/>
-        <segue reference="9rd-zm-cna"/>
+        <segue reference="ryW-Z9-DFT"/>
         <segue reference="gqH-y7-kuY"/>
     </inferredMetricsTieBreakers>
     <resources>
