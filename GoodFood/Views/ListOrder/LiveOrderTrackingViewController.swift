@@ -9,16 +9,13 @@ import UIKit
 
 class LiveOrderTrackingViewController: UIViewController {
 
+    
+    // MARK: -lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    
+    // MARK: -button
     @IBAction func closeBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 }

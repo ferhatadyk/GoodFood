@@ -9,19 +9,24 @@ import UIKit
 
 class DishLandscapeCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = String(describing: DishLandscapeCollectionViewCell.self)
     
-    
+    // MARK: -outlets
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    // MARK: -variables
+    static let identifier = String(describing: DishLandscapeCollectionViewCell.self)
+
+    
+    // MARK: -functions
     func setup(dish: Dish) {
         dishImageView.image = dish.image
         titleLabel.text = dish.name
         descLabel.text = dish.description
     }
    
+    // MARK: -button
     @IBAction func AddBtn(_ sender: UIButton) {
     }
     

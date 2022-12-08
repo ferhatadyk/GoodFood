@@ -11,12 +11,17 @@ import Firebase
 class CategoryCollectionViewCell: UICollectionViewCell {
 
     
-    static let identifier = String(describing: CategoryCollectionViewCell.self)
-    
+   
+    // MARK: -outlets
     @IBOutlet var categoryImageView: UIImageView!
-    
     @IBOutlet var categoryTitleLabel: UILabel!
     
+    
+    // MARK: -variables
+    static let identifier = String(describing: CategoryCollectionViewCell.self)
+    
+    
+    // MARK: -functions
     
     func setup(category: DishCategory) {
         categoryTitleLabel.text = category.name

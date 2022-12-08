@@ -10,46 +10,41 @@ import Firebase
 
 class SettingsViewController: UIViewController {
     
-   var data = [String]()
-
+  
+    // MARK: -outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: -variables
+   var data = [String]()
+    
+    // MARK: -lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-         data = ["Account","Payment Methods","Address "]
-      
-       tableView.delegate = self
+        data = ["Account","Payment Methods","Address "]
+        tableView.delegate = self
         tableView.dataSource = self
-        
         title = "Settings"
     }
-    
+    // MARK: -button
     @IBAction func logoutBtn(_ sender: UIButton) {
        
-              
         let alert = UIAlertController(title: "Log Out", message: "Account Log Out", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction)  in
             do {
-                      
-                      try Auth.auth().signOut()
+                    try Auth.auth().signOut()
                 self.performSegue(withIdentifier: "exitToSingIn", sender: nil)
-                      
                   } catch {
                   print("Error")
-                     
                   }
-        }))
+            }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
-              
-          
-        
-        
     }
+    
 }
-
-
+    // MARK: -extension
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: -tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }

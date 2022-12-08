@@ -9,15 +9,19 @@ import UIKit
 
 class DishPortraitCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "DishPortraitCollectionViewCell"
     
     
-    
+    // MARK: -outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var fiyatLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    // MARK: -variables
+    static let identifier = "DishPortraitCollectionViewCell"
+    
+    
+    // MARK: -functions
     func setup(dish: Dish) {
         
         titleLabel.text = dish.name

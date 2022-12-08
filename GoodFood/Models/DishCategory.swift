@@ -13,5 +13,4 @@ struct DishCategory {
         let name: String
         let image: UIImage
     
-    
 }

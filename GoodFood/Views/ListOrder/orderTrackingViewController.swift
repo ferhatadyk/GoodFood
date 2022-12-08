@@ -9,21 +9,18 @@ import UIKit
 
 class orderTrackingViewController: UIViewController {
 
-    @IBAction func close(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+   
+    
+    // MARK: -lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    
+    // MARK: -button
     @IBAction func backHome(_ sender: UIButton) {
         performSegue(withIdentifier: "backHomeVC", sender: nil)
+        
     }
-    
     
     @IBAction func liveOrderBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "liveOrderTracking", sender: nil)
@@ -31,6 +28,10 @@ class orderTrackingViewController: UIViewController {
     
     @IBAction func supportBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "HelpingVC", sender: nil)
+    }
+    
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     

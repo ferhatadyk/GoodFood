@@ -11,16 +11,17 @@ import FirebaseDatabase
 class SingUpViewController: UIViewController {
     
     
-    
+    // MARK: -outlets
     @IBOutlet var nameSurnameTxtField: UITextField!
     @IBOutlet var singUpEmailTextField: UITextField!
     @IBOutlet var singUpAdressTextfield: UITextField!
     @IBOutlet var singUpPasswordTextField: UITextField!
     @IBOutlet var telTextField: UITextField!
     
-    
+    // MARK: -variables
     let databaseRef = Database.database(url: "https://goodfood-718da-default-rtdb.europe-west1.firebasedatabase.app/").reference()
 
+    // MARK: -lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         if FirebaseApp.app() == nil {
@@ -28,13 +29,11 @@ class SingUpViewController: UIViewController {
          }
         let keyboardRecognizer = UITapGestureRecognizer(target: self, action: #selector(keyboardSecret))
         view.addGestureRecognizer(keyboardRecognizer)
-        
     }
     
- 
+    // MARK: -functions
     @objc func keyboardSecret() {
         view.endEditing(true)
-        
     }
     
    private func errorMessage(titleInput: String, messageInput: String) {
@@ -44,8 +43,7 @@ class SingUpViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    //MARK--
-    
+    // MARK: -button
     @IBAction func singUpClicked(_ sender: UIButton) {
         
         let name = nameSurnameTxtField.text!
@@ -63,8 +61,6 @@ class SingUpViewController: UIViewController {
                        
                 self.errorMessage(titleInput: "Error", messageInput: error?.localizedDescription ?? "You got an error please try again.")
                 }else{
-                   
-                    
                     
                     let userData = ["uid":Auth.auth().currentUser!.uid,
                                     "name":name,
@@ -73,8 +69,6 @@ class SingUpViewController: UIViewController {
                                     "password":password,
                                     "phone":phone]
                     
-                    
-                   
                     self.databaseRef.child("users").childByAutoId().setValue(userData)
                     self.performSegue(withIdentifier: "doneSingUp", sender: nil)
                 }
@@ -89,6 +83,5 @@ class SingUpViewController: UIViewController {
     @IBAction func toSingInDont(_ sender: UIButton) {
         performSegue(withIdentifier: "toAlreadySingIn", sender: nil)
     }
-    
     
 }

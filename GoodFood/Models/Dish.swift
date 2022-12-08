@@ -13,7 +13,6 @@ struct Dish {
     let image: UIImage?
     let price: Int?
     
-    
     var formattedPrice: String {
         return "\(price ?? 0) ₺"
         
