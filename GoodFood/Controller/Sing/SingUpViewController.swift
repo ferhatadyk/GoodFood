@@ -58,27 +58,22 @@ class SingUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: singUpEmailTextField.text!, password: singUpPasswordTextField.text!) { (authdataresult, error) in
                 
                 if error != nil {
-                       
                 self.errorMessage(titleInput: "Error", messageInput: error?.localizedDescription ?? "You got an error please try again.")
                 }else{
-                    
                     let userData = ["uid":Auth.auth().currentUser!.uid,
                                     "name":name,
                                     "eposta":eposta,
                                     "address":address,
                                     "password":password,
                                     "phone":phone]
-                    
                     self.databaseRef.child("users").childByAutoId().setValue(userData)
                     self.performSegue(withIdentifier: "doneSingUp", sender: nil)
                 }
             }
-            
         }else{
             errorMessage(titleInput: "Error!", messageInput: "Please enter your information.")
         }
     }
-    
     
     @IBAction func toSingInDont(_ sender: UIButton) {
         performSegue(withIdentifier: "toAlreadySingIn", sender: nil)

@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import CryptoKit
+import AuthenticationServices
 
 class ForgetViewController: UIViewController {
     
     
     // MARK: -outlets
     @IBOutlet var forgetEmail: UITextField!
-    @IBOutlet var forgetNewPassword: UITextField!
-    @IBOutlet var forgetAgainPassword: UITextField!
     
     // MARK: -lifeCycle
     override func viewDidLoad() {
@@ -29,6 +31,14 @@ class ForgetViewController: UIViewController {
     
     // MARK: -button
     @IBAction func confirmClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "toForgetToSignIn", sender: nil)
+        let auth = Auth.auth()
+        auth.sendPasswordReset(withEmail: forgetEmail.text!) { (error) in
+            if let error = error {
+              //  let alert = service.createAlertController(title: "Error", message: error.localizedDescription)
+             //   self.present(alert, animated: true, completion: nil)
+                return
+            }
+        }
+       // performSegue(withIdentifier: "toForgetToSignIn", sender: nil)
     }
 }

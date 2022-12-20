@@ -148,7 +148,7 @@
 				2261EFF6293F795F004CCDA0 /* Networking */,
 				2239B1D72906BC2E007BA8E4 /* Extension */,
 				2239B1D32906B2D9007BA8E4 /* CustomViews */,
-				2239B1D22906B2D0007BA8E4 /* Views */,
+				2239B1D22906B2D0007BA8E4 /* Controller */,
 				2239B1D12906B2C9007BA8E4 /* Models */,
 				2239B1C32906AE39007BA8E4 /* Main.storyboard */,
 				22A2A8BD290A8D6D005639A6 /* HomeViewController.swift */,
@@ -172,7 +172,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2239B1D22906B2D0007BA8E4 /* Views */ = {
+		2239B1D22906B2D0007BA8E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				22E9F36C291B9E340036CE3D /* Search */,
@@ -183,7 +183,7 @@
 				22DBBBA2291183FA00D07F24 /* DishDetail */,
 				2260A85F29099E8D004CD620 /* Sing */,
 			);
-			path = Views;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		2239B1D32906B2D9007BA8E4 /* CustomViews */ = {
