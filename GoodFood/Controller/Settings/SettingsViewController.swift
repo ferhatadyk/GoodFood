@@ -56,8 +56,17 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "accountVC", sender: nil)
+        let segueIdentifier: String
+        switch indexPath.row {
+        case 0:
+            segueIdentifier = "accountVC"
+        case 1:
+            segueIdentifier = "paymentVC"
+        default:
+            segueIdentifier = "addressVC"
+        }
+        self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
-   
+   //performSegue(withIdentifier: "accountVC", sender: nil)
     
 }
