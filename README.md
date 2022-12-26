@@ -23,9 +23,11 @@ Food Delivery App
 
 
 ## Tech Stack
-- Firebase
+-UI: Xib
+-Backend: Firebase
 - Uikit
-- Collection view Xib
+- Collection view 
 - Table view 
 - Search
 - Picker View
+
