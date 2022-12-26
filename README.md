@@ -21,3 +21,11 @@ Food Delivery App
 </p>
 
 
+
+## Tech Stack
+- Firebase
+- Uikit
+- Collection view Xib
+- Table view 
+- Search
+- Picker View
